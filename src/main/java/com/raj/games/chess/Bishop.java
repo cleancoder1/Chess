@@ -1,10 +1,16 @@
 package com.raj.games.chess;
 
-import static java.lang.Math.abs;
+import com.raj.games.constansts.Color;
 
 public class Bishop extends Piece {
+
+    public Bishop(Color color) {
+        super(color);
+    }
+
     @Override
-    public boolean isValidMove(Position position) {
-        return abs(getPosition().findSlope(position)) == 1;
+    public boolean isValidMove(Cell cell) {
+        return false;
+//        return abs(getPosition().findSlope(position)) == 1;
     }
 }

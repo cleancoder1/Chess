@@ -46,9 +46,6 @@ public class Position {
     }
 
 
-    public boolean matchesExactlyOneCoordinate(Position destination){
-        return  x == destination.getX() && y != destination.getY() ||
-                y == destination.getY() && x != destination.getX() ;
-    }
+
 
 }

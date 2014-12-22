@@ -1,8 +1,16 @@
 package com.raj.games.chess;
 
-public class King extends  Piece {
+import com.raj.games.constansts.Color;
+
+public class King extends Piece {
+
+    protected King(Color color) {
+        super(color);
+    }
+
     @Override
-    public boolean isValidMove(Position newPosition) {
-        return getPosition().findDistance(newPosition) == Math.sqrt(2);
+    public boolean isValidMove(Cell cell) {
+        return false;
+//        return getPosition().findDistance(newPosition) == Math.sqrt(2);
     }
 }

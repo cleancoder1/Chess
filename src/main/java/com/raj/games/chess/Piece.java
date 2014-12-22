@@ -1,29 +1,45 @@
 package com.raj.games.chess;
 
-import com.raj.games.chess.Color;
+import com.raj.games.constansts.Color;
+
+import java.util.Optional;
 
 public abstract class Piece {
 
-    private Color color;
-    private Position position;
+    private final Color color;
+    private Cell cell;
+
+
+    protected Piece(Color color) {
+        this.color = color;
+    }
 
     public Position getPosition() {
-        return position;
+        return cell.getPosition();
     }
 
-    public void setPosition(Position position) {
-        this.position = position;
-    }
 
-    public void move(Position newPosition) {
-        if (newPosition.isValid() && isValidMove(newPosition)) {
-            position = newPosition;
+    public void move(Cell newCell) {
+        if (newCell.getPosition().isValid() && isValidMove(newCell)) {
+            newCell.setPieceOptional(Optional.of(this));
         } else {
             throw new IllegalArgumentException("this is not a valid move");
         }
     }
 
-    public abstract boolean isValidMove(Position position);
+    public Color getColor() {
+        return color;
+    }
+
+    public Cell getCell() {
+        return cell;
+    }
+
+    public void setCell(Cell cell) {
+        this.cell = cell;
+    }
+
+    public abstract boolean isValidMove(Cell cell);
 
 
 }
