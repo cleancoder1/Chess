@@ -1,4 +1,4 @@
-package com.raj.game.constants;
+package com.raj.games.chess;
 
 public class Horse extends Piece {
 

@@ -1,5 +1,8 @@
 package com.raj.game.constants;
 
+import com.raj.games.chess.Horse;
+import com.raj.games.chess.Position;
+
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 

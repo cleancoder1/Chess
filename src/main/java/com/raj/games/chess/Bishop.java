@@ -1,4 +1,4 @@
-package com.raj.game.constants;
+package com.raj.games.chess;
 
 import static java.lang.Math.abs;
 
